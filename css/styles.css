@@ -1,0 +1,193 @@
+/**
+ * Treehouse FSJS Techdegree
+ * Random Quote Generator - CSS
+ */
+
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap');
+
+body {
+  background-color: rgb(200, 185, 115);
+  color: white;
+  font-family: cursive, serif;
+  padding: 5px;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 5px;
+  font-family: cursive;
+}
+
+h1 {
+  text-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+}
+
+.load-quote {
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.3);
+  width: 12em;
+  max-height: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  font-family: cursive;
+}
+
+.load-quote:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  animation: buttonShine 2.5s infinite;
+}
+
+@keyframes buttonShine {
+  0% {filter: brightness(1)}
+  25% {filter: brightness(2)}
+  85% {filter: brightness(2)}
+  100% {filter: brightness(1)}
+}
+
+.load-quote:focus {
+  outline: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: auto;
+  padding: 5px;
+}
+
+.quote-box {
+  text-shadow: 3px 3px 3px rgba(50, 50, 50, 0.3);
+  line-height: 0.5;
+}
+
+.quote {
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1.2;
+  position: relative;
+  margin: 0;
+  margin-left: 10px;
+  font-family: cursive;
+}
+
+.quote:before,
+.quote:after {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  position: absolute;
+  font-family: cursive;
+}
+
+.quote:before {
+  content: "“";
+  top: 0.1em;
+  left: -0.5em;
+  font-family: cursive;
+}
+
+.quote:after {
+  content: "”";
+  bottom: -0.1em;
+  margin-left: 0.1em;
+  position: absolute;
+  font-family: cursive;
+}
+
+.source {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+  font-family: cursive;
+}
+
+.source:before {
+  content: "—";
+  font-family: cursive;
+}
+
+.citation {
+  font-style: italic;
+  font-family: cursive;
+}
+
+.citation:before {
+  content: ", ";
+  font-style: normal;
+  font-family: cursive;
+}
+
+.year:before {
+  content: ", ";
+  font-style: normal;
+  font-family: cursive;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 25px;
+  }
+
+  header {
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    height: 73px;
+    margin-top: 20px;
+    margin-right: 5px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    font-family: cursive;
+  }
+
+  .load-quote {
+    font-size: 1.7rem;
+    font-family: cursive;
+  }
+
+  .container {
+    padding: 25px 25px 15px 55px;
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0 4px 4px 0;
+    font-family: cursive;
+  }
+
+  .quote {
+    font-size: 3rem;
+    font-family: cursive;
+  }
+
+  .quote:before,
+  .quote:after {
+    font-size: 3rem;
+    font-family: cursive;
+  }
+
+  .quote:before {
+    top: 0.25em;
+    font-family: cursive;
+  }
+
+  .quote:after {
+    bottom: 0.1em;
+    font-family: cursive;
+  }
+
+  .source {
+    font-size: 1.25rem;
+    font-family: cursive;
+  }
+}
